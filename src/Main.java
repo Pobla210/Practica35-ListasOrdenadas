@@ -6,6 +6,8 @@ public class Main {
         String opcion;
         int numero;
         String nomloca;
+        ConversorLocalidad conver=new ConversorLocalidad();
+        conver.convertir(ListaLocalidades.getListaLocalidades());
 
         do {
             System.out.println("1)Mostrar los datos de una localidad"+
@@ -22,11 +24,14 @@ public class Main {
                 case 1:
                     System.out.println("Dime el nombre de la localidad: ");
                     nomloca= in.nextLine();
-
-
+                    conver.mostrarLocalidad(nomloca);
+                    break;
                 case 2:
-                    loc
+                    conver.mostrarLocalidadNombre();
+                    break;
                 case 3:
+                    conver.mostrarProv();
+                    break;
                 case 4:
                 case 5:
                 case 6:

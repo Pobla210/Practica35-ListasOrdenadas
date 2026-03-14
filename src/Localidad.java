@@ -4,6 +4,23 @@ public class Localidad {
     protected double x;
     protected double y;
 
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+
     public Localidad(String localidad,String provincia,double x,double y) throws FormatException{
         if (localidad.isEmpty() || provincia.isEmpty()){
             throw new FormatException("Error. Este dato no puede ir vacio");
