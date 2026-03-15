@@ -37,4 +37,12 @@ public class ConversorLocalidad {
             System.out.println(locpro.toString());
         }
     }
+
+    public void mostrarNomProv(){
+        for (Localidad nompro:localidades){
+            System.out.println(nompro.getProvincia());
+        }
+    }
+
+
 }

@@ -5,7 +5,12 @@ public class Main {
         Scanner in=new Scanner(System.in);
         String opcion;
         int numero;
-        String nomloca;
+        String nomloca="";
+        String nomprovincia="";
+        double corx=0;
+        double cory=0;
+        String validador="[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+";
+
         ConversorLocalidad conver=new ConversorLocalidad();
         conver.convertir(ListaLocalidades.getListaLocalidades());
 
@@ -34,8 +39,40 @@ public class Main {
                     break;
                 case 4:
                 case 5:
+                    try{
+                        System.out.println("Dime el nombre: ");
+                        nomloca= in.nextLine();
+                        if (!nomloca.matches(validador)){
+                            throw new FormatException("No puedes introducir numeros.");
+                        }
+                        System.out.println("Dime la provincia: ");
+                        nomprovincia= in.nextLine();
+                        if (!nomprovincia.matches(validador)){
+                            throw new FormatException("No puedes introducir numeros.");
+                        }
+
+                        System.out.println("Dime la coordenada x: ");
+                        String coorx=in.nextLine();
+                        corx=Double.parseDouble(coorx);
+                        System.out.println("Dime la coordenada y: ");
+                        String coory=in.nextLine();
+                        cory=Double.parseDouble(coory);
+                    }
+
+                    catch (FormatException fe){
+                    System.out.println(fe.getMessage());
+                    }
+
+                    Localidad nueva=new Localidad(nomloca,nomprovincia,corx,cory);
+                    conver.localidades.add(nueva);
+                    conver.localidadesnom.add(nueva);
+                    conver.localidadprov.add(nueva);
+
                 case 6:
                 case 7:
+                    conver.mostrarNomProv();
+                    break;
+                case 8:
                     System.out.println("Saliendo...");
                     break;
             }

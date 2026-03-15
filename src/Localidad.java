@@ -31,6 +31,7 @@ public class Localidad {
         this.y=y;
     }
 
+
     public String toString(){
         return "Nombre de la localidad: "+localidad+
                 "\nNombre de la provincia: "+provincia+
