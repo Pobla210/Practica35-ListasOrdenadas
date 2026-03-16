@@ -67,7 +67,7 @@ public class Main {
                     conver.localidades.add(nueva);
                     conver.localidadesnom.add(nueva);
                     conver.localidadprov.add(nueva);
-
+                    System.out.println("Localidad añadida");
                 case 6:
                 case 7:
                     conver.mostrarNomProv();
