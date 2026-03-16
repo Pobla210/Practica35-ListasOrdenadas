@@ -35,6 +35,6 @@ public class Localidad {
     public String toString(){
         return "Nombre de la localidad: "+localidad+
                 "\nNombre de la provincia: "+provincia+
-                "\nCoordenadas: "+"X: "+x+" Y: "+y;
+                "\nCoordenadas: "+"X: "+x +" Y: "+y;
     }
 }

@@ -27,9 +27,15 @@ public class Main {
 
             switch (numero){
                 case 1:
-                    System.out.println("Dime el nombre de la localidad: ");
-                    nomloca= in.nextLine();
-                    conver.mostrarLocalidad(nomloca);
+                    try{
+                        System.out.println("Dime el nombre de la localidad: ");
+                        nomloca= in.nextLine();
+                        System.out.println(conver.mostrarLocalidad(nomloca));
+                    }
+                    catch (LocalidadInvalidaException lie){
+                        System.out.println(lie.getMessage());
+                    }
+
                     break;
                 case 2:
                     conver.mostrarLocalidadNombre(in);
@@ -68,6 +74,7 @@ public class Main {
                     conver.localidadesnom.add(nueva);
                     conver.localidadprov.add(nueva);
                     System.out.println("Localidad añadida");
+                    break;
                 case 6:
                 case 7:
                     conver.mostrarNomProv();
