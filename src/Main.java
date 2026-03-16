@@ -32,10 +32,10 @@ public class Main {
                     conver.mostrarLocalidad(nomloca);
                     break;
                 case 2:
-                    conver.mostrarLocalidadNombre();
+                    conver.mostrarLocalidadNombre(in);
                     break;
                 case 3:
-                    conver.mostrarProv();
+                    conver.mostrarProv(in);
                     break;
                 case 4:
                 case 5:
